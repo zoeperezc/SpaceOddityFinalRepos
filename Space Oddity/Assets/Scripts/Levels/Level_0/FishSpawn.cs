@@ -26,7 +26,7 @@ public class FishSpawn : MonoBehaviour
     void Start()
     {
         StartCoroutine("Difficulty");
-        PanelVictory.SetActive(true);
+        PanelVictory.SetActive(false);
     }
 
     private void Update()

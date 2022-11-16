@@ -7,6 +7,9 @@ public class PlayerShoot : MonoBehaviour
 {
     SerialPort puertoExtras;
 
+    public AudioClip ShootClip;
+    public AudioSource AudioSourceShoot;
+
     public Bullet bulletprefab;
     private bool playerShoot = false;
     
@@ -58,6 +61,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
+        AudioSourceShoot.PlayOneShot(AudioSourceShoot);
         Bullet bullet = Instantiate(this.bulletprefab, this.transform.position, Quaternion.identity);
     }
 
